@@ -8,6 +8,7 @@
     font-family: 'Poppins', sans-serif;
     box-shadow: 0px 1px 5px black;
     z-index: 100;
+    background-image: linear-gradient(to left bottom, #030c1a, #081323, #0a182c, #0b1d36, #0d2240);
 }
 
 h1 {

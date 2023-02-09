@@ -5,12 +5,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  
-  
+  scroll-behavior: smooth;
+
+
 }
 
-.app{
-  background-image: linear-gradient(to left bottom, #030c1a, #081323, #0a182c, #0b1d36, #0d2240);
+.app {
+  /* background-image: linear-gradient(to left bottom, #030c1a, #081323, #0a182c, #0b1d36, #0d2240); */
+  background-image: linear-gradient(to bottom, #06101e, #081221, #091425, #0a1628, #0a182c);
   min-height: 100vh;
   background-color: black;
   color: white;
@@ -18,3 +20,10 @@
   padding-bottom: 70px;
 }
 
+.pageTitle {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 1.75rem;
+}

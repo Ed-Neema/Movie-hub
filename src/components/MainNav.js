@@ -47,13 +47,14 @@ export default function SimpleBottomNavigation() {
           setValue(newValue);
         }}
         sx={{
-          width: 500,
+          width: '100%',
           position: "fixed",
           bottom: 0,
           backgroundColor: "#030C1A",
           backgroundImage:
             "background-image: linear-gradient(to right, #030c1a, #090715, #0b040d, #080105, #000000)",
           zIndex: 100,
+          fontFamily: "inherit",
         }}
       >
         <BottomNavigationAction

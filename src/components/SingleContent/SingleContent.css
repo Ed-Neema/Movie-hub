@@ -1,0 +1,46 @@
+.media {
+    display: flex;
+    flex-direction: column;
+    width: 12.5rem;
+    padding: 0.3125rem;
+    margin: 0.3125rem 0;
+    background-color: #0d2240;
+    border-radius: 0.625rem;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    transition: transform .2s;
+    cursor: pointer;
+    color: #fad7bc;
+}
+
+.media:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 550px) {
+    .media {
+        width: 46%;
+    }
+}
+
+.poster {
+    border-radius: 0.625rem;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 1.063rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+}
+
+.subTitle {
+    color: #ae947e;
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.188rem;
+    padding: 0 0.125rem;
+    padding-bottom: 0.188rem;
+}
