@@ -9,6 +9,8 @@ import MovieCreationRoundedIcon from "@mui/icons-material/MovieCreationRounded";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import LiveTvRoundedIcon from "@mui/icons-material/LiveTvRounded";
 import { useNavigate } from "react-router-dom";
+
+
 export default function SimpleBottomNavigation() {
   const [value, setValue] = useState(0);
   const navigate = useNavigate();
