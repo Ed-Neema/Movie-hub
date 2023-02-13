@@ -18,6 +18,7 @@ const darkTheme = createTheme({
         root: {
           fontSize: "0.8rem",
           color: "#ae947e",
+          fontFamily:'Poppins',
         },
         valueLabel: {},
       },
