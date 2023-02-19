@@ -3,6 +3,7 @@ import { img_300, unavailable } from "../../config/config";
 import Badge from "@mui/material/Badge";
 import "./SingleContent.css";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ContentModal from "../ContentModal/ContentModal";
 
 const theme = createTheme({
   palette: {
@@ -24,25 +25,22 @@ const SingleContent = ({
   vote_average,
 }) => {
   return (
-    <div className="media">
-      <ThemeProvider theme={theme}>
-        <Badge
-          badgeContent={vote_average}
-          color={vote_average > 6 ? "primary" : "secondary"}
-        />
-      </ThemeProvider>
-
+    <ContentModal media_type={media_type} id={id}>
+      <Badge
+        badgeContent={vote_average}
+        color={vote_average > 6 ? "primary" : "secondary"}
+      />
       <img
         className="poster"
-        src={poster ? `${img_300}/${poster}` : unavailable}
+        src={poster ? `${img_300}${poster}` : unavailable}
         alt={title}
       />
-      <p className="title">{title}</p>
-      <div className="subTitle">
+      <b className="title">{title}</b>
+      <span className="subTitle">
         {media_type === "tv" ? "TV Series" : "Movie"}
-        <div className="subTitle">{date}</div>
-      </div>
-    </div>
+        <span className="subTitle">{date}</span>
+      </span>
+    </ContentModal>
   );
 };
 

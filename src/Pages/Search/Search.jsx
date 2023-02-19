@@ -28,7 +28,7 @@ const Search = () => {
   const [type, setType] = useState(0);
   const [page, setPage] = useState(1)
   const [searchText, setSearchText] = useState("");
-  const [content, setContent] = useState()
+  const [content, setContent] = useState([])
   const [numOfPages, setNumOfPages] = useState();
 
   const fetchSearch = async () => {
@@ -63,7 +63,7 @@ const Search = () => {
               "& .css-10botns-MuiInputBase-input-MuiFilledInput-input": {
                 backgroundColor: "rgba(255, 255, 255, 0.10)",
                 borderRadius: "5px",
-                color: "#fff",
+                color: "rgba(174, 148, 126, 0.8)",
                 fontFamily: "Poppins",
               },
             }}
@@ -74,55 +74,33 @@ const Search = () => {
             id="outlined-basic"
             label="Search"
             variant="filled"
-            // color="primary"
           />
-          <Button variant="contained" style={{ marginLeft: 10 }}>
+          <Button
+            variant="contained"
+            style={{ marginLeft: 10 }}
+            onClick={fetchSearch}
+          >
             <SearchRoundedIcon />
           </Button>
         </div>
         {/* Tabs  */}
         <Tabs
           value={type}
-          // indicatorColor="primary"
-          // textColor="primary"
-          // fontFamily="Poppins"
-          // backgroundColor="primary"
-
-          // sx={{
-          //   "& .css-15ri884-MuiButtonBase-root-MuiTab-root": {
-          //     color: "rgba(255, 255, 255, 0.10)",
-          //     fontFamily: "Poppins",
-          //     backgroundColor: "#fff",
-          //   },
-          // }}
           onChange={(event, newValue) => {
             setType(newValue);
             setPage(1);
           }}
+          style={{ paddingBottom: 10 }}
         >
           <Tab
             label="Search Movies"
-            style={{ width: "50%" }}
+            style={{ width: "50%", color: "#ae947e" }}
             textColor="primary"
-            sx={{
-              "& .css-15ri884-MuiButtonBase-root-MuiTab-root": {
-                // backgroundColor: "rgba(255, 255, 255, 0.10)",
-                // color: "rgba(255, 255, 255, 0.10)",
-                // fontFamily: "Poppins",
-              },
-            }}
           ></Tab>
           <Tab
             label="Search Series"
-            style={{ width: "50%" }}
+            style={{ width: "50%", color: "#ae947e" }}
             textColor="primary"
-            sx={{
-              "& .css-12gaafx-MuiButtonBase-root-MuiTab-root": {
-                // color: "rgba(255, 255, 255, 0.10)",
-                // fontFamily: "Poppins",
-                // backgroundColor: "rgba(255, 255, 255, 0.10)",
-              },
-            }}
           ></Tab>
         </Tabs>
       </ThemeProvider>
